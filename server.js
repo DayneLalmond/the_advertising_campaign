@@ -49,7 +49,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 //app will use routes to comminucate with api methods
-// app.use(routes);
+app.use(routes);
 
 //sync the server and log when listening on the terminal
 sequelize.sync({ force: false }).then(() => {
