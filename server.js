@@ -7,8 +7,10 @@ const exphbs = require('express-handlebars');
 //order matters beyond this line
 const path = require('path');
 const routes = require('./controllers');
-const helpers = require('./utils/auth');
+const helpers = require('./utils/helpers');
 
+//use mailjet to create the emails
+const mailjet = require('./config/mailjet');
 //use sql to create the database
 const sequelize = require('./config/connection');
 //initialize sequelize with session store
