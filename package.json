@@ -1,11 +1,12 @@
 {
-  "name": "tac",
+  "name": "package.json",
   "version": "1.0.0",
   "description": "the advertising campaign",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tac": "nodemon server.js"
+    "tac": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
