@@ -1,11 +1,12 @@
 {
-  "name": "tac",
+  "name": "package.json",
   "version": "1.0.0",
   "description": "the advertising campaign",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "tac": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -25,6 +26,7 @@
     "express-handlebars": "^6.0.6",
     "express-session": "^1.17.3",
     "mysql2": "^2.3.3",
+    "node-mailjet": "^5.1.1",
     "sequelize": "^6.25.1"
   },
   "devDependencies": {

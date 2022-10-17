@@ -1,3 +1,4 @@
+
 // Fetch Method that fetches types of method
 // Return Empty Function
 
@@ -26,3 +27,5 @@ async function postData(url = '', data = {}) {
       console.log(data); // JSON data parsed by `data.json()` call
     });
   
+console.log("test")
+
