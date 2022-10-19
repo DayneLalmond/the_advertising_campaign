@@ -1,8 +1,6 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 const withAuth = require('../../utils/auth');
-<<<<<<< HEAD
-=======
 
 // Create get routes
 // Post route
@@ -67,7 +65,6 @@ router.post('/logout', (req, res) => {
     res.status(404).end();
   }
 });
->>>>>>> e41626cb1c0fcca541732281cb1114bdeb8de135
 
 module.exports = router;
 
