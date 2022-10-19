@@ -32,8 +32,10 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        isLowercase: true,
-        isUppercase: true,
+        // This is causing a conflict to create a new user, because 
+        // it can't be all upper or lower case at the same time
+        // isLowercase: true,
+        // isUppercase: true,
         len: [8,12],
       },
     },
