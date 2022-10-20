@@ -19,6 +19,8 @@ router.post('/', async (req, res) => {
       res.status(200).json(userData);
     });
   } catch (err) {
+    //console.error gives a more detailed error log
+    console.error(err)
     res.status(400).json(err);
   }
 });
@@ -43,7 +45,7 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
-
+//when the session is saved, it creates the session cookie that attaches to the browser
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;

@@ -1,5 +1,6 @@
 const User = require('./user');
 const Ad = require('./ad');
+const Contact = require('./contact');
 
 User.hasMany(Ad, {
     foreignKey: 'user_id',
@@ -11,4 +12,9 @@ Ad.belongsTo(User, {
     onDelete: 'CASCADE'
 });
 
-module.exports = { User, Ad };
+Ad.hasMany(Contact, {
+    foreignKey: 'ad_id',
+    onDelete: 'CASCADE'
+});
+
+module.exports = { User, Ad, Contact };
