@@ -1,35 +1,41 @@
 const router = require('express').Router();
-const { Ad } = require('../../models');
-const mailjet = require('../../config/mailjet')
+const { Ad, Contact } = require('../../models');
+const mailjet = require('../../config/mailjet');
+// path /api/ads
 
-// const createAd = mailjet
-//         .post('send', { version: 'v3.1' })
+//add a contact to the mailjetstream
+router.post('/', async (req, res) => {
+    try {
+        const adData = await Ad.create(req.body);
+
+        res.status(200).json(adData)
+    } catch (err) {
+        console.error(err)
+        res.status(400).json(err)
+    }
+});
+
+
+// const request = mailjet
+//         .post('send')
 //         .request({
 //           Messages: [
 //             {
 //               From: {
-//                 Email: "dlalmondo@gmail.com",
-//                 Name: "TAC"
+//                 Email: "pilot@mailjet.com",
+//                 Name: "Mailjet Pilot"
 //               },
 //               To: [
 //                 {
-//                   Email: "dlalmondo@gmail.com",
+//                   Email: "passenger1@mailjet.com",
 //                   Name: "passenger 1"
 //                 }
 //               ],
-//               Subject: "Do not email me!",
-//               TextPart: "If you are working on this, make sure to change [To: ? | Email: ?] to your email to view changes.",
-//               HTMLPart: "<h3>Dear passenger 1, the stage is yours</h3><br />Do not change the email this function is called from. The API is registered under dlalmondo@gmail.com."
+//               Subject: "Your email flight plan!",
+//               TextPart: "Dear passenger 1, welcome to Mailjet! May the delivery force be with you!",
+//               HTMLPart: "<h3>Dear passenger 1, welcome to <a href=\"https://www.mailjet.com/\">Mailjet</a>!</h3><br />May the delivery force be with you!"
 //             }
 //           ]
 //         })
-
-// createAd
-//     .then((result) => {
-//         console.log(result.body)
-//     })
-//     .catch((err) => {
-//         console.log(err.statusCode)
-//     })
 
 module.exports = router;

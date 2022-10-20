@@ -11,14 +11,18 @@ Ad.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    title: {
+    subject: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    context: {
+    text: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    html: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     sequelize,

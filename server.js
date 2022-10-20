@@ -54,6 +54,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 //sync the server and log when listening on the terminal
-sequelize.sync({ force: true }).then(() => {
+sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log('Now listening on port ' + PORT));
 });
