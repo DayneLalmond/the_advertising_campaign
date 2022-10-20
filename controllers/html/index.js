@@ -9,10 +9,6 @@ router.get("/home", async (req, res) => {
   return res.render("home");
 });
 
-router.get("/aboutus", async (req, res) => {
-  return res.render("aboutus");
-});
-
 router.get("/login", async (req, res) => {
   return res.render("login");
 });
@@ -21,9 +17,12 @@ router.get("/signup", async (req, res) => {
   return res.render("signup");
 });
 
+router.get("/contact", async (req, res) => {
+  return res.render("contact");
+});
 
-router.get("/news", async (req, res) => {
-    return res.render("news");
+router.get("/createad", async (req, res) => {
+    return res.render("createAd");
  });
   
 module.exports = router;
