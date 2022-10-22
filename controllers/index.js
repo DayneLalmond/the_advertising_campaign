@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { Ad, User } = require('../models');
 
 const apiRoutes = require('./api');
 const homeRoutes = require('./html');
