@@ -21,8 +21,8 @@ router.get("/contact", async (req, res) => {
   return res.render("contact");
 });
 
-router.get("/createad", async (req, res) => {
-    return res.render("createAd");
+router.get("/create", async (req, res) => {
+    return res.render("create");
  });
   
 module.exports = router;

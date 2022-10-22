@@ -45,11 +45,12 @@ router.post('/login', async (req, res) => {
         .json({ message: 'Incorrect email or password, please try again' });
       return;
     }
+
+    req.session.user_id = userData.id;
+    req.session.logged_in = true;
 //when the session is saved, it creates the session cookie that attaches to the browser
     req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-      
+      console.log(req.session.id)
       res.json({ user: userData, message: 'You are now logged in!' });
     });
 
@@ -59,12 +60,14 @@ router.post('/login', async (req, res) => {
 });
 // To logon out the previous user account
 router.post('/logout', (req, res) => {
+  console.log(req.session.id)
+
   if (req.session.logged_in) {
     req.session.destroy(() => {
       res.status(204).end();
     });
   } else {
-    res.status(404).end();
+    res.status(400).end();
   }
 });
 

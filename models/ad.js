@@ -15,10 +15,6 @@ Ad.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    text: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
     html: {
       type: DataTypes.STRING,
       allowNull: false,
