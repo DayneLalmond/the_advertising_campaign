@@ -14,7 +14,7 @@ Ad.belongsTo(User, {
 
 Ad.hasMany(Contact, {
     foreignKey: 'ad_id',
-    onDelete: 'CASCADE'
+    onDelete: 'CASCADE',
 });
 
 module.exports = { User, Ad, Contact };

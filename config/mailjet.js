@@ -11,4 +11,4 @@ const mailjet = Mailjet.apiConnect(
     }
 );
 
-module.exports = mailjet
+module.exports = mailjet;

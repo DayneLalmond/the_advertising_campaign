@@ -8,13 +8,6 @@ router.post('/', async (req, res) => {
     try {
         const adData = await Ad.create(req.body);
 
-        const subject = req.body.subject
-        const text = req.body.text
-
-        Ad.create({
-            subject: subject,
-            text: text
-        })
         res.status(200).json(adData)
 
     } catch (err) {

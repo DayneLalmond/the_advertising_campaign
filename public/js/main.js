@@ -6,4 +6,3 @@ const loginFormHandler = async (event) => {
 function login(){
     document.location.replace('/home');
 };
-console.log("test")
