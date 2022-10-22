@@ -1,24 +1,47 @@
- {{> nav}}
- <div class="col-md-6">
-    <h2>Signup</h2>
+{{> nav}}
+<form>
+  <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
 
-    <form class="form signup-form">
-      <div class="form-group">
-        <label for="name-signup">name:</label>
-        <input class="form-input" type="text" id="name-signup" />
-      </div>
-      <div class="form-group">
-        <label for="email-signup">email:</label>
-        <input class="form-input" type="text" id="email-signup" />
-      </div>
-      <div class="form-group">
-        <label for="password-signup">password:</label>
-        <input class="form-input" type="password" id="password-signup" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">signup</button>
-      </div>
-    </form>
-  </div>
+                  <div class="text-center">
+                    <img src="./images/tac.logo.png" style="width: 185px;" alt="logo">
+                    <p class="mt-1 mb-5 pb-1">We are The TAC Team</p>
+                  </div>
 
-  <script src="./js/signup.js"></script>
+
+
+                  <h4><strong>Create an new account</strong></h4>
+
+                  <br>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example11">Name</label>
+                    <input type="email" id="form2Example11" class="form-control" placeholder="Please enter you name." />
+
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example11">Email Address</label>
+                    <input type="email" id="form2Example11" class="form-control"
+                      placeholder="Please enter you email address." />
+
+                  </div>
+                  <div class="form-outline mb-4">
+                    <label class="form-label" for="form2Example11">Password</label>
+                    <input type="password" id="form2Example22" class="form-control"
+                      placeholder="Please enter you password." />
+
+                  </div>
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <!-- Submit button -->
+                    <button type="button" class="btn btn-primary btn-lg">Create</button>
+                    {{!-- <a class="text-muted" href="#!">Forgot password?</a> --}}
+                  </div>
+</form>
+</section>
+
+<script src="./js/login.js"></script>
