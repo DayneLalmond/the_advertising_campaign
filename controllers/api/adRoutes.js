@@ -8,6 +8,28 @@ router.post('/', async (req, res) => {
     try {
         const adData = await Ad.create(req.body);
 
+        const result = await mailjet
+        .post('send', { version: 'v3.1' })
+        .request({
+          Messages: [
+            {
+              From: {
+                Email: "dlalmondo@gmail.com",
+                Name: "Mailjet Pilot"
+              },
+              To: [
+                {
+                  Email: "dlalmondo@gmail.com",
+                  Name: "wrk pls"
+                }
+              ],
+              Subject: req.body.subject,
+              HTMLPart: req.body.html
+            }
+          ]
+        });
+
+        console.log(result.body)
         res.status(200).json(adData)
 
     } catch (err) {
@@ -16,4 +38,4 @@ router.post('/', async (req, res) => {
     }
 });
 
-module.exports = router;
+module.exports = router;   
