@@ -1,5 +1,13 @@
 {{> nav}}
 <form>
+  <section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-10">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-6">
+                <div class="card-body p-md-5 mx-md-4">
   
   <!-- Name input -->
   <div class="form-outline mb-4">
@@ -7,26 +15,39 @@
     <label class="form-label" for="form4Example1">Name</label>
   </div>
 
-  <!-- Email input -->
-  <div class="form-outline mb-4">
-    <input type="email" id="form4Example2" class="form-control" />
-    <label class="form-label" for="form4Example2">Email address</label>
-  </div>
+                  <div class="text-center">
+                    <img src="./images/tac.logo.png" style="width: 185px;" alt="logo">
+                    <p class="mt-1 mb-5 pb-1">We love to hear your opinion!</p>
+                  </div>
 
-  <!-- Message input -->
-  <div class="form-outline mb-4">
-    <textarea class="form-control" id="form4Example3" rows="4"></textarea>
-    <label class="form-label" for="form4Example3">Message</label>
-  </div>
 
-  <!-- Checkbox -->
-  <div class="form-check d-flex justify-content-center mb-4">
-    <input class="form-check-input me-2" type="checkbox" value="" id="form4Example4" checked />
-    <label class="form-check-label" for="form4Example4">
-      Send me a copy of this message
-    </label>
-  </div>
 
+                  <h4><strong>Contact Form</strong></h4>
+
+                  <br>
+                  <div class="form-outline mb-4">
+                    <!-- Name input -->
+                    <label class="form-label" for="form2Example11"></label>
+                    <input type="text" id="form2Example22" class="form-control" placeholder="Name" />
+                    <!-- Email input -->
+                    <div class="form-outline mb-4">
+                      <label class="form-label" for="form2Example11"></label>
+                      <input type="email" id="form2Example11" class="form-control" placeholder="Email address" />
+                    </div>
+                    <!-- Message input -->
+                    <div class="form-outline mb-4">
+                      <textarea class="form-control" id="form4Example3" rows="4" placeholder="Message"></textarea>
+                      <label class="form-label" for="form4Example3"></label>
+                    </div>
+                  </div>
+                  <div class="text-center pt-1 mb-5 pb-1">
+                    <!-- Submit button -->
+                    <button type="button" class="btn btn-primary btn-lg">Send</button>
+                    {{!-- <a class="text-muted" href="#!">Forgot password?</a> --}}
+                  </div>
+</form>
+</section>
+<script src="./js/login.js"></script>
   <!-- Submit button -->
   <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
 </form>
