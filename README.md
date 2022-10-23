@@ -76,6 +76,7 @@ THEN the user see navigation links for the homepage, the dashboard, and the opti
 
 ---
 ## Screenshot: 
+<!-- // Need to add screenshot based on the requirement -->
 
 ![TAC Application Screenshot can be found here.](./Assets/video/Team-Profile-Generator-Walkthrough.gif)
 
