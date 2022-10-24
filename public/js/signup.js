@@ -1,6 +1,3 @@
-
-//stuff ive copied from other locations
-
 const signupFormHandler = async (event) => {
   event.preventDefault()
   
