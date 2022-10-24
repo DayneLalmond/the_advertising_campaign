@@ -1,48 +1,25 @@
+<nav>
+  <h3><a href="https://github.com/DayneLalmond/the_advertising_campaign" target="_blank" "git"><strong>Github</strong><i
+        data-feather="github"></i></a></h3>
+  {{!-- <a href="http://getbootstrap.com/" id="login">Login<i data-feather="log-in"></i></a> --}}
+</nav>
 
-{{> nav}}
-<div class="jumbotron">
-  <h1 class="display-3">Welcome to TAC!</h1>
-  <p>The Advertising Campaign! TAC</p>
-  <hr class="my-2">
-  <p>Our project will allow users to create ads and give subscribed customers a first look at the provided material
-        via email. The minimum viable product would include using an authenticated login, a user’s ability to create an
-        ad, prompt a list of subscriber emails, and complete the campaign by sending the newly created ad to their email
-        address.</p>
-  <p class="lead"><br>
-    <a class="btn btn-primary btn-lg" href="./signup" role="button">Join Today</a>
-  </p>
-</div>
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
+      <div class="inner cover">
+        <h1 class="cover-heading">The Advertising Campaign</h1>
 
+        <p class="lead"><strong>TAC is a marketing webtool for administrators to promote their startup business.
+            This application provides secure login authentication, minimalistic user interface, and a
+            commercial email marketing service to send personalized emails to customers. Signup today to expand
+            your clientele. Already signed up? Login below and let's work together.</strong></p>
 
-<div class="container">
-    <h4>We Are The Advertising Campaign!</h4>
-    <p>Our project will allow users to create ads and give subscribed customers a first look at the provided material
-        via email. The minimum viable product would include using an authenticated login, a user’s ability to create an
-        ad, prompt a list of subscriber emails, and complete the campaign by sending the newly created ad to their email
-        address.
-    </p>
-</div>
-
-
-
-
-  <!-- Copyright -->
-  {{!-- <section class="grainy-gradient-intro">
-  <svg height="0" width="0">
-    <filter id='f'>
-      <feTurbulence type='fractalNoise' baseFrequency='.5' />
-    </filter>
-  </svg>
-  <div class="d-flex justify-content-center align-items-center text-center" style="height: calc(100vh - 26px);">
-    <h1 class="display-4 fw-bold text-uppercase text-dark mb-0" style="letter-spacing: 15px;">Coffee and Games</h1>
+      </div>
+      <p class="lead"><a class="btn btn-lg btn-success btn-home" href="./signup">Signup</a><a class="btn btn-lg btn-success btn-home"
+          href="./login">Login</a></p>
+    </div>
   </div>
-</section> --}}
-
-<h1>Hello World!</h1>
-{{{get_emoji}}}
-<button id="ad">Create Ad</button>
-<input id = "email-login" />
-<input id = "password-login" />
-
+</div>
 
 <script src="./js/home.js"></script>

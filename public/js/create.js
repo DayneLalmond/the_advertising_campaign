@@ -2,17 +2,19 @@ const adFormHandler = async (event) => {
   event.preventDefault();
 
   const formElem = document.querySelector('#formElem'); 
+  const email = document.querySelector('#email-to').value.trim();
   const subject = document.querySelector('#subject-text').value.trim();
-  const html = document.querySelector('#html-text').value.trim();
+  const html = document.querySelector('#subject-text').value.trim();
 
   // cosnt html1 = "<h1>" + html + "</h1>"
 
 
-  if (subject && html) {
+  if (email && subject) {
     // Send a POST request to the API endpoint here
     const response = await fetch('/api/ads', {
       method: 'POST',
       body: JSON.stringify({
+        email,
         subject,
         html
       }),
@@ -22,8 +24,8 @@ const adFormHandler = async (event) => {
     })
 
     if (response.ok) {
-      document.location.replace('/home');
-
+      document.location.replace('/sent');
+    
     } else {
       alert(response.statusText);
     }

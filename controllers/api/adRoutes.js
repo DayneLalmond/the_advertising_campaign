@@ -19,8 +19,8 @@ router.post('/', async (req, res) => {
               },
               To: [
                 {
-                  Email: "dlalmondo@gmail.com",
-                  Name: "wrk pls"
+                  Email: req.body.email,
+                  Name: "Student"
                 }
               ],
               Subject: req.body.subject,

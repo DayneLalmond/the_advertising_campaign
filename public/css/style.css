@@ -1,0 +1,146 @@
+html {
+    font-family: 'Acme';
+    scroll-behavior: smooth;
+    -webkit-box-shadow: inset 0px 0px 60px #EEEEEE;
+    box-shadow: inset 0px 0px 120px #EEEEEE;
+}
+
+
+nav {
+    opacity: 0;
+    padding-top: 40px;
+    padding-left: 980px;
+}
+
+nav:hover {
+    animation: navigation 0.4s;
+    animation-fill-mode: both;
+}
+
+@keyframes navigation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#navlink {
+    text-shadow: #2b2b2b 1px 2px 2px;
+    color: #00AF54;
+}
+
+#navlink:focus,
+#navlink:hover {
+    color: #2b2b2b;
+}
+
+h2 {
+    text-shadow: #2b2b2b 1px 3px 3px;
+    text-align: center;
+}
+
+#name-signup,
+#email-to {
+    position: relative;
+    text-align: center;
+    left: 6vh;
+    margin: 1vh;
+    padding: 1vh;
+}
+
+#email-signup,
+#email-login,
+#subject-text {
+    position: relative;
+    text-align: center;
+    left: 6vh;
+    margin: 1vh;
+    padding: 1vh;
+}
+
+#password-signup,
+#password-login,
+#html-text {
+    position: relative;
+    text-align: center;
+    left: 6vh;
+    margin: 1vh;
+    padding: 1vh;
+}
+
+#btn-signup,
+#btn-login,
+#btn-create {
+    position: relative;
+    left: 14vh;
+    margin: 1vh;
+}
+
+.btn-home {
+    position: relative;
+    left: 24vh;
+    margin: 1vh;
+}
+
+body {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    color: #EEEEEE;
+}
+
+.site-wrapper {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.site-wrapper-inner {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.cover-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.inner {
+    text-shadow: #2b2b2b 1px 3px 3px;
+    text-align: center;
+    padding: 30px;
+}
+
+.masthead-brand {
+    text-align: left;
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+
+.cover {
+    padding: 0 20px;
+}
+
+.cover .btn-lg {
+    margin: 10px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.site-wrapper-inner {
+    vertical-align: middle;
+}
+
+@media (min-width: 992px) {
+
+    .masthead,
+    .mastfoot,
+    .cover-container {
+        width: 600px;
+    }
+}

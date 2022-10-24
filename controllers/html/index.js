@@ -17,12 +17,12 @@ router.get("/signup", async (req, res) => {
   return res.render("signup");
 });
 
-router.get("/contact", async (req, res) => {
-  return res.render("contact");
-});
-
 router.get("/create", async (req, res) => {
     return res.render("create");
  });
+
+ router.get("/sent", async (req, res) => {
+  return res.render("sent");
+});
   
 module.exports = router;

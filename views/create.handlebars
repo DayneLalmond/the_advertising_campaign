@@ -1,13 +1,33 @@
-{{> nav}}
+<nav>
+  <h3><a href="./home" id="navlink"><i data-feather="chevron-left"></i><strong>Logout</strong></a></h3>
+</nav>
+
+<div class="site-wrapper">
+  <div class="site-wrapper-inner">
+    <div class="cover-container">
 
 
+      <div class="col-md-6">
+        <h2><strong>Complete the form below, and we'll take care of the rest.</strong></h2>
 
-<form enctype="text/html" class="form ad-form" id="formElem">
-  <input type="text" id="subject-text"/>
-  <input type="text" id="html-text"/>
-  <button type="submit">Submit</button>
-</form>
+        <form enctype="text/html" class="form ad-form" id="formElem">
+          <div class="form-group">
+            <input type="text" id="email-to" placeholder="Whom are you emailing?"/>
+          </div>
+          <div class="form-group">
+            <input type="text" id="subject-text" placeholder="What's the topic?"/>
+          </div>
+          <div class="form-group">
+            <textarea type="text" id="html-text" placeholder="Enter HTML text."></textarea>
+          </div>
+          <div class="form-group">
+            <button class="btn btn-success" type="submit" id="btn-create">Send</button>
+          </div>
+        </form>
+      </div>
 
-{{!-- <script type="module" src="../config/mailjet.js"></script> --}}
+    </div>
+  </div>
+</div>
+
 <script src="./js/create.js"></script>
-<script src="./js/logout.js"></script>
