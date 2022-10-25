@@ -27,7 +27,12 @@ const adFormHandler = async (event) => {
       document.location.replace('/sent');
     
     } else {
-      alert(response.statusText);
+      function clear() {
+        document.querySelector('#email-to').value = '';
+        document.querySelector('#subject-text').value = '';
+        document.querySelector('#html-text').value = '';
+    }
+    clear()
     }
   }
 };

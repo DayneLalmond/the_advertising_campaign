@@ -3,6 +3,10 @@ const express = require('express');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
 
+//terminal design packages
+const chalk = require('chalk');
+const figlet = require('figlet');
+
 //variable directories required
 //order matters beyond this line
 const path = require('path');
@@ -54,6 +58,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(routes);
 
 //sync the server and log when listening on the terminal
-sequelize.sync({ force: true }).then(() => {
-  app.listen(PORT, () => console.log('Now listening on port ' + PORT));
+sequelize.sync({ force: false }).then(() => {
+  const online = (chalk.greenBright.bold(figlet.textSync('The  Advertising  Campaign', { horizontalLayout: 'fitted' })
+  ))
+//console log the server is online with figlet and chalk formatting
+  app.listen(PORT, () => console.log(online));
 });

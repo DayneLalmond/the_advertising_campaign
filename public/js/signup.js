@@ -15,7 +15,12 @@ const signupFormHandler = async (event) => {
       if (response.ok) {
         document.location.replace('/login');
       } else {
-        alert(response.statusText);
+        function clear() {
+          document.querySelector('#name-signup').value = '';
+          document.querySelector('#email-signup').value = '';
+          document.querySelector('#password-signup').value = '';
+      }
+      clear()
       }
     }
   };

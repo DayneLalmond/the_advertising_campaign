@@ -2,6 +2,7 @@ const loginFormHandler = async (event) => {
     event.preventDefault();
 
     // Collect values from the login form
+    const form = document.querySelector('#btn-login');
     const email = document.querySelector('#email-login').value.trim();
     const password = document.querySelector('#password-login').value.trim();
 
@@ -22,7 +23,11 @@ const loginFormHandler = async (event) => {
             // If successful, redirect the browser to the profile page
             document.location.replace('/create');
         } else {
-            alert('Invalid credentials');
+            function clear() {
+                document.querySelector('#email-login').value = '';
+                document.querySelector('#password-login').value = '';
+            }
+            clear()
         }
     }
 };

@@ -1,4 +1,4 @@
-# Group 4: Full-Stack Project | The Advertising Campaign 
+# Group 4: Full-Stack Project | The Advertising Campaign [TAC]
  
 
 ## License | Badges:
@@ -10,7 +10,6 @@
 ![Handlebars.js](https://img.shields.io/badge/-Handlebars-lightgrey)
 ![MySQL](https://img.shields.io/badge/-MySQL-blue)
 ![Bootstrap](https://img.shields.io/badge/-Bootstrap-brightgreen)
-![Inquirer Package](https://img.shields.io/badge/-Inquirer%20Package-red)
 ![Mailjet API](https://img.shields.io/badge/-Mailjet%20API-yellow)
 
 
@@ -77,8 +76,7 @@ THEN the user see navigation links for the homepage, the dashboard, and the opti
 ---
 ## Screenshot: 
 <!-- // Need to add screenshot based on the requirement -->
-
-![TAC Application Screenshot can be found here.](./Assets/video/Team-Profile-Generator-Walkthrough.gif)
+![Capture](./public/images/tac.png)
 
 ---
 ## Deployed URL:
